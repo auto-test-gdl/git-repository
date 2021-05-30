@@ -1,0 +1,27 @@
+linux指令：
+mkdir创建目录
+ls 查看文件，ls -ah 查看隐藏文件
+tab 补全快捷键
+
+git 使用
+git 三个区的概念：工作区，暂存区，和版本库
+
+1 创建用户make user "gdl"
+2 创建邮箱globle mail "634115896@qq.com"
+3 建立仓库，新建一个文件夹，mkdir git-repository
+4 初始化仓库，init git
+5 新建文件例如readme.txt，加入内容，然后添加到git中：git add readme.txt
+5 提交文件：git commit readme.txt -m "add a readme file"  
+6 查看提交记录：git log,查看历史提交记录：git reflog
+7 返回上个版本：git reset --hard HEAD^(^^上上个版本)，或者git reset --hard commit_id
+8 查看状态：git status 会显示改动未提交的和新增未添加的文件
+9 查看工作区和版本库的区别：git diff HEAD readme.txt
+
+10丢弃工作区的修改:git checkout -- readme.txt  回到最近一次git commit或git add时的状态
+   一种是readme.txt自修改后还没有被放到暂存区，现在，撤销修改就回到和版本库一模一样的状态；
+   一种是readme.txt已经添加到暂存区后，又作了修改，现在，撤销修改就回到添加到暂存区后的状态。
+   git checkout -- file命令中的--很重要，没有--，就变成了“切换到另一个分支”的命令
+   
+11删除文件：git rm readme.txt  , git commit -m "remove readme.txt"  如果是误删，找回：git checkout -- readme.txt
+
+12
